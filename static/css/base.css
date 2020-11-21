@@ -1,0 +1,580 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.alert-primary {
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 5px;
+    width: fit-content;
+    z-index: 2;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+a {
+    color: #fafafa;
+}
+
+a:link {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff828e;
+}
+
+a:active {
+  text-decoration: none;
+  color: #ff828e;
+}
+
+.container-wrapper {
+    background-color: #fafafa;
+}
+
+.container-fluid {
+    
+}
+
+.container-wrapper--black {
+  background-color: #313333;
+  color: white;
+}
+
+.alert-container .col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.logo-top {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.site-wide-alert {
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 5px 15px;
+  background-color: #eec802;
+  border-color: #eec802;
+}
+
+.callout-container {
+  height: 100vh;
+
+  background: url("../assets/bg1.jpeg") no-repeat bottom right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.quotes-container {
+}
+
+.features-container {
+}
+
+.gallery-container {
+}
+
+#features-container {
+  padding-bottom: 20px;
+}
+
+.about-container {
+}
+
+.partners-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.opaque-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+/*Page Headers*/
+
+.page-header {
+  margin-bottom: 0;
+  border-bottom: 0;
+  text-align: center;
+}
+
+.page-header h2 {
+  margin-top: 0;
+}
+
+.quotes .page-header {
+  margin-bottom: 25px;
+}
+
+/*Content Containers*/
+
+.content-container {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+/*Navbar*/
+
+.navalert-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 0;
+  padding-right: 0;
+  z-index: 1;
+}
+
+
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.navbar .navbar-toggler {
+  border: 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar .navbar-nav a {
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+
+.dropdown-item {
+    text-align: center;
+}
+
+.nav-2 {
+    width: 25%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    padding-top: 5%;
+}
+
+.active-link {
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.non-active-link {
+    font-weight: bold;
+}
+
+.active-link:hover,
+.active-link:active,
+.active-link:focus,
+.non-active-link:hover,
+.non-active-link:active,
+.non-active-link:focus {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.50)
+} 
+
+/*Jumbotron*/
+
+.jumbotron {
+  background-color: transparent;
+}
+
+.jumbotron-header {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-top: 100px;
+}
+
+.jumbotron .lead {
+  margin: 25px 0;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.jumbotron small {
+  font-size: 60%;
+  font-style: italic;
+  color: #d0d0d0;
+}
+
+/*Block Dividers*/
+
+.block-divider {
+  width: 75px;
+  height: 5px;
+  border: 0;
+  background-color: #bb3229;
+}
+
+.block-divider--black {
+  background-color: #313333;
+}
+
+.block-divider--red: {
+  background-color: #bb3229;
+}
+
+.block-divider--short {
+  width: 35px;
+  background-color: #444;
+}
+
+.block-divider--white {
+  background-color: white;
+}
+
+/*Buttons*/
+
+.btn--cta {
+  font-weight: bold;
+  border-radius: 23px;
+  width: 200px;
+  margin-top: 25px;
+  box-shadow: none;
+}
+
+.btn--red {
+  color: white;
+  background-color: #bb3229;
+  border-color: #bb3229;
+}
+
+.btn--red:hover,
+.btn--red:active,
+.btn--red:focus,
+.btn--red:active:focus {
+  background-color: #f34925;
+  border-color: #f34925;
+  color: white;
+  box-shadow: none;
+}
+
+.feature {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature i {
+  margin-bottom: 20px;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.feature .btn {
+  background-color: white;
+  border-color: white;
+  border-radius: 15px;
+  min-width: 100px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #313333;
+}
+
+/*----------------------------Footer*/
+
+#contact {
+    padding: 10px 30px;
+}
+
+
+.contact-container {
+    padding:0;
+}
+
+.key {
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.value {
+    float: right;
+}
+
+footer {
+  background-color: #525252;
+  color: #fafafa;
+  min-height: 120px;
+  margin: 0;
+}
+
+.social-links {
+  padding-bottom: 15px;
+}
+
+.social-links li a i {
+  width: 32px;
+  height: 32px;
+  padding: 12px 0;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 7px;
+  text-align: center;
+  color: #fafafa;
+  background: #8f8f8f;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+  background: #e84610;
+}
+
+#footer-details {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.r-align {
+    float: right;
+    bottom: 0;
+}
+
+/*-----------------------------------------About*/
+.about-story {
+  text-align: center;
+  padding: 0 25px;
+}
+
+/*-----------------------------------------Partners*/
+
+.partner-item div {
+  padding: 50px 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rounded-logo {
+  border-radius: 75px;
+}
+
+/*------------------------------------------Contact*/
+.contact-details {
+  text-align: center;
+  padding: 0 25px;
+  font-size: 20px;
+}
+
+.key .value {
+  padding-right: 8px;
+  display: inline;
+}
+
+#contact {
+    align-items: right;
+}
+
+.key p,
+.value p {
+  margin: 0;
+}
+
+.key {
+  width: 30%;
+  margin-right: 21px;
+  padding-top: 5px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+
+.key p {
+  font-weight: 700;
+}
+
+.value {
+  width: 60%;
+  position: relative;
+}
+
+.contact-icon {
+  padding-top: 15px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+/*-----------------------------------Carousel*/
+.carousel-inner {
+  z-index: 0;
+}
+
+.quotes-row {
+  justify-content: center;
+}
+
+/*-----------------------------------Shop*/
+.cards-container {
+    margin: auto;
+    background: url('../assets/1.jpeg') no-repeat top center fixed; 
+}
+.cards-row {
+    padding-top: 5%;
+    justify-content: center;
+}
+
+.card {
+    padding: 15px;
+    margin: 10px;
+    width: auto;
+    height: auto;
+    background-color: #d8d8d8;
+    border-radius: .5rem;
+}
+
+.opaque-overlay-shop {
+      position: fixed;
+}
+
+.stock-indicator-on {
+    color: rgb(3, 197, 3);
+    font-weight: bold;
+}
+
+.stock-indicator-off {
+    color: red;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #313333;
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    color: black;
+    background-color: #fafafa;
+    border: solid 1px black;
+}
+
+.form-container {
+    padding: 30px;
+    padding-top: 50px;
+    overflow: hidden;
+    margin-top: 75px;
+    width: auto;
+}
+
+.login-form {
+    padding: 15px;
+}
+
+.flashes h4 {
+    line-height: 2;
+}
+
+.btn {
+    margin: 5px 0;
+}
+
+.fof {
+    width: auto;
+    margin: 75px auto;
+}
+
+.no-results {
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+/*------------------------------Search Bar*/
+.search-form {
+    margin: auto;
+    margin-top: 75px;
+}
+
+
+.btn-search {
+    margin: 0;
+}
+/*------------------------Media Queries*/
+
+@media(max-width: 600px) {
+    .logo-top {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 15px;
+        left: auto;
+        right: auto;
+    }
+    
+    .logo-row {
+        width: 100px;
+        margin: 0 auto;
+    }
+    .navalert-container {
+        position: relative;
+        background-color: black;
+}
+    .nav-link {
+        text-align: center;
+    }
+
+    .nav-2 {
+    width: 80%;
+    margin: auto;
+}
+}
+
+@media only screen and (max-width : 767px) {
+.callout-container {
+   height: 100vh;
+    
+    background: url('../assets/bg2.jpeg') no-repeat top center fixed; 
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100vw 100vh;
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+}
