@@ -62,8 +62,8 @@
           Shop
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ammo</a>
-          <a class="dropdown-item" href="#">Guns & Parts</a>
+          <a class="dropdown-item" href="{% url 'products' %}?category=ammo">Ammo</a>
+          <a class="dropdown-item" href="{% url 'products' %}?category=guns_parts">Guns & Parts</a>
     
       </li>
                     {% if request.user.is_authenticated %}
@@ -73,7 +73,7 @@
                     {% endif %}
 					<div class="row">
 						<div class="logo-row">
-							<a href="{% url 'home' %}"><img src="#" alt="Company Logo" width="125" height="125" class="logo-top d-none d-sm-block"></a>
+							<a href="{% url 'home' %}"><img src="{{ MEDIA_URL }}logo.png" alt="Company Logo" width="125" height="125" class="logo-top d-none d-sm-block"></a>
 						</div>
 					</div>
 		</nav>

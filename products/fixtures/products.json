@@ -1,0 +1,32 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Aero Precision M4E1 AR15 Lower Black",
+      "description": "Aero Precision M4E1 AR15 Lower Black",
+      "price": 7.99,
+      "category": 1,
+      "rating": 4.6,
+      "is_available": true,
+      "image_url": "",
+      "image": "m4e1.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340156",
+      "name": ".20 ga Winchester Super-X #7.5sho",
+      "description": ".20 ga Winchester Super-X #7.5sho",
+      "price": 7.59,
+      "category": 2,
+      "rating": 4.5,
+      "is_available": false,
+      "image_url": "",
+      "image": "40SW.jpg"
+    }
+  }
+]
