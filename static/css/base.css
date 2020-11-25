@@ -535,6 +535,32 @@ footer {
 .btn-search {
     margin: 0;
 }
+
+/*----------------------------Shopping bag*/
+
+.custom-mt-50 {
+    margin-top: 50px;
+}
+
+.input-group-append .btn, .input-group-prepend .btn {
+
+    margin: 0;
+
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+#bag_icon {
+    padding: 0;
+}
 /*------------------------Media Queries*/
 
 @media(max-width: 600px) {
@@ -580,5 +606,9 @@ footer {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.custom-mt-50 {
+    margin-top: 0;
 }
 }

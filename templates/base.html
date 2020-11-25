@@ -64,13 +64,27 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{% url 'products' %}?category=ammo">Ammo</a>
           <a class="dropdown-item" href="{% url 'products' %}?category=guns_parts">Guns & Parts</a>
-    
+        </div>
       </li>
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                             <li class="nav-item mr-2"><a class="nav-link" href="#">Product Management</a></li>
                         {% endif %}
                     {% endif %}
+                    <li class="nav-item mr-2">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" id="bag_icon" href="{% url 'view_bag' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
 					<div class="row">
 						<div class="logo-row">
 							<a href="{% url 'home' %}"><img src="{{ MEDIA_URL }}logo.png" alt="Company Logo" width="125" height="125" class="logo-top d-none d-sm-block"></a>
