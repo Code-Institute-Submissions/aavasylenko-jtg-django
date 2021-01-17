@@ -44,9 +44,22 @@
 		<nav class="navbar navbar-dark navbar-expand-sm">
 			<a href="{% url 'home' %}" class="navbar-brand d-lg-none">JTG</a>
 
+            <a class="{% if grand_total %}text-grey{% else %}d-none{% endif %} nav-link custom-ml-11 d-lg-none" id="bag_icon" href="{% url 'view_bag' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        ${{ total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+            </a>
+
 			<button class="navbar-toggler ml-auto" type="button" data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'>
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 			<div class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="navbar-nav mr-auto">
@@ -58,33 +71,35 @@
 					<li class="nav-item mr-2"><a class="nav-link"
 							href="#">Contact</a></li>
                     <li class="nav-item dropdown mr-2">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Shop
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{% url 'products' %}?category=ammo">Ammo</a>
-          <a class="dropdown-item" href="{% url 'products' %}?category=guns_parts">Guns & Parts</a>
-        </div>
-      </li>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+                            aria-haspopup="true" aria-expanded="false">Shop</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'products' %}?category=ammo">Ammo</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=guns_parts">Guns & Parts</a>
+                        </div>
+                    </li>
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                             <li class="nav-item mr-2"><a class="nav-link" href="#">Product Management</a></li>
                         {% endif %}
                     {% endif %}
+				</ul>
+                <ul id="shopping-bag-icon-desktop">
                     <li class="nav-item mr-2">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" id="bag_icon" href="{% url 'view_bag' %}">
+                        <a class="{% if grand_total %}text-grey{% else %}d-none{% endif %} nav-link" id="bag_icon" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        ${{ total|floatformat:2 }}
                                     {% else %}
                                         $0.00
                                     {% endif %}
                                 </p>
                             </div>
                         </a>
-                    </li>
+                    </li> 
+                </ul>
 					<div class="row">
 						<div class="logo-row">
 							<a href="{% url 'home' %}"><img src="{{ MEDIA_URL }}logo.png" alt="Company Logo" width="125" height="125" class="logo-top d-none d-sm-block"></a>
@@ -93,7 +108,7 @@
 		</nav>
 	</div>
     {% if messages %}
-        <div class="message-container">
+        <div class="message-container" id="message_container">
             {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
@@ -231,6 +246,8 @@
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
+        //function to hide the django message
+        $('#message_container').delay(6000).slideUp(300);
     </script>
     {% endblock %}
 	
