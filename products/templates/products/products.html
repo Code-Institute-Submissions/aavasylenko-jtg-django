@@ -95,7 +95,7 @@
         </div>
     {% if request.user.is_superuser %}
         <a
-          href="#"
+          href="{% url 'edit_product' product.id %}"
           class="btn btn-warning edit-btn"
           >Edit Product <i class="fa fa-edit right"></i
         ></a>
