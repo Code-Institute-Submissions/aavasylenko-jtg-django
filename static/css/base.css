@@ -6,14 +6,6 @@ ul {
   list-style-type: none;
 }
 
-.alert-primary {
-    margin: auto;
-    margin-top: 75px;
-    margin-bottom: 5px;
-    width: fit-content;
-    z-index: 2;
-}
-
 html,
 body {
   overflow-x: hidden;
@@ -43,13 +35,16 @@ a:active {
   color: #ff828e;
 }
 
+.gradient-bg {
+    background-color: #dbdbdb;
+    overflow: hidden;
+}
+
+
 .container-wrapper {
     background-color: #fafafa;
 }
 
-.container-fluid {
-    
-}
 
 .container-wrapper--black {
   background-color: #313333;
@@ -68,14 +63,6 @@ a:active {
   z-index: 2;
 }
 
-.site-wide-alert {
-  border-radius: 0;
-  margin-bottom: 0;
-  padding: 5px 15px;
-  background-color: #eec802;
-  border-color: #eec802;
-}
-
 .callout-container {
   height: 100vh;
 
@@ -91,20 +78,8 @@ a:active {
   position: relative;
 }
 
-.quotes-container {
-}
-
-.features-container {
-}
-
-.gallery-container {
-}
-
 #features-container {
   padding-bottom: 20px;
-}
-
-.about-container {
 }
 
 .partners-container {
@@ -135,9 +110,6 @@ a:active {
   margin-top: 0;
 }
 
-.quotes .page-header {
-  margin-bottom: 25px;
-}
 
 /*Content Containers*/
 
@@ -216,11 +188,22 @@ a:active {
 #shopping-bag-icon-desktop {
     margin: 0;
     margin-right: 150px;
+    padding: 0;
+}
+
+#account-ul {
+    margin: 0;
 }
 
 .custom-ml-11 {
     margin-left: 11rem!important;
 }
+
+.profile-icon {
+    padding: 0;
+    padding-right: 7px;
+}
+
 
 /*Jumbotron*/
 
@@ -241,11 +224,6 @@ a:active {
   font-size: 25px;
 }
 
-.jumbotron small {
-  font-size: 60%;
-  font-style: italic;
-  color: #d0d0d0;
-}
 
 /*Block Dividers*/
 
@@ -256,9 +234,6 @@ a:active {
   background-color: #bb3229;
 }
 
-.block-divider--black {
-  background-color: #313333;
-}
 
 .block-divider--red: {
   background-color: #bb3229;
@@ -274,6 +249,11 @@ a:active {
 }
 
 /*Buttons*/
+
+.btn {
+    width: -webkit-fill-available;
+    margin: 5px 0;
+}
 
 .btn--cta {
   font-weight: bold;
@@ -377,10 +357,7 @@ footer {
   padding-bottom: 0;
 }
 
-.r-align {
-    float: right;
-    bottom: 0;
-}
+
 
 /*-----------------------------------------About*/
 .about-story {
@@ -452,9 +429,6 @@ footer {
   z-index: 0;
 }
 
-.quotes-row {
-  justify-content: center;
-}
 
 /*-----------------------------------Shop*/
 .cards-container {
@@ -469,7 +443,6 @@ footer {
 .card {
     padding: 15px;
     margin: 10px;
-    width: auto;
     height: auto;
     background-color: #d8d8d8;
     border-radius: .5rem;
@@ -514,22 +487,6 @@ footer {
     height: calc(1.5em + .75rem + 2px);
 }
 
-.login-form {
-    padding: 15px;
-}
-
-.flashes h4 {
-    line-height: 2;
-}
-
-.btn {
-    margin: 5px 0;
-}
-
-.fof {
-    width: auto;
-    margin: 75px auto;
-}
 
 .no-results {
     color: #ffffff;
@@ -569,6 +526,10 @@ footer {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+.disabled {
+    cursor: not-allowed;
 }
 
 #bag_icon {
@@ -656,7 +617,7 @@ footer {
     }
 
     .nav-2 {
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 }
@@ -682,9 +643,11 @@ footer {
     margin-top: 0;
 }
 
-#shopping-bag-icon-desktop {
+#shopping-bag-icon-desktop,
+#account-ul {
     display: none;
 }
+
 }
 
 /* ------------------------------- bootstrap toasts */

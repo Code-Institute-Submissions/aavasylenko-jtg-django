@@ -85,23 +85,27 @@
         {% else %}
         <p class="stock-indicator-off d-flex flex-column">Out of Stock</p>
         {% endif %}
+        </div>
             <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
             {% csrf_token %}
                 <input class="form-control qty_input d-none" type="number"
                     name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                <input type="submit" class="btn btn-success mt-auto text-uppercase" value="Add to Bag">
+                {% if product.is_available %}
+                <input type="submit" class="btn btn-success text-uppercase" value="Add to Bag">
+                {% else %}
+                <input type="submit" class="btn btn-success text-uppercase disabled" value="Add to Bag" disabled>
+                {% endif %}
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>
-        </div>
     {% if request.user.is_superuser %}
         <a
           href="{% url 'edit_product' product.id %}"
-          class="btn btn-warning edit-btn"
+          class="btn btn-warning"
           >Edit Product <i class="fa fa-edit right"></i
         ></a>
         <button data-toggle="modal"
           data-target="#ConfirmDeleteModal{{ product.id }}"
-          class="btn btn-danger delete-btn"
+          class="btn btn-danger"
           >Remove Product <i class="fa fa-times-circle right"></i
         ></button>
   {% endif %}
