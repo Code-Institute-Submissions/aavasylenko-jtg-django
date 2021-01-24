@@ -96,13 +96,20 @@
                 </ul>
                 <ul id="account-ul">
                     <li class="nav-item mr-2">
-                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_authenticated and not on_profile_page %}
                         <a class="nav-link profile-icon" href="{% url 'profile' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Profile</p>
                             </div>
                         </a>
+                        {% elif request.user.is_authenticated and on_profile_page %}
+                        <a class="nav-link profile-icon" href="{% url 'account_logout' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">Sign Out</p>
+                            </div>
+                        </a>                        
                         {% else %}
                         <a class="nav-link profile-icon" href="{% url 'account_login' %}">
                             <div class="text-center">

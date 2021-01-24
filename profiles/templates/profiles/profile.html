@@ -18,6 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col custom-mt-50">
+                <a class="text-dark float-right p-1 d-sm-block d-md-none d-lg-none" href="#">Sign Out</a>
                 <hr>
                 <h2 class="logo-font mb-4">My Profile</h2>
                 <hr>
@@ -29,7 +30,7 @@
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                    <button class="btn btn-dark text-light text-uppercase float-right">Update Information</button>
                 </form>
             </div>
             <div class="col-12 col-lg-6">
@@ -48,7 +49,7 @@
                             {% for order in orders %}
                                 <tr>
                                     <td>
-                                        <a href="{% url 'order_history' order.order_number %}"
+                                        <a class="text-info" href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
                                             {{ order.order_number|truncatechars:6 }}
                                         </a>
@@ -72,6 +73,7 @@
                     </table>
                 </div>
             </div>
+        </div>
         </div>
 {% endblock %}
 
