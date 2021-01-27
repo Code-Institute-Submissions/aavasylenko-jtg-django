@@ -21,7 +21,7 @@
                 <hr>
                 <h2 class="logo-font mb-4">Thank You</h2>
                 <hr>
-                <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <p class="text-black">Your order information is below. A confirmation email was sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
 
@@ -61,9 +61,9 @@
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <p class="small mb-0 text-black font-weight-bold">
+                            <a class="text-dark" href="{% url 'product_detail' item.product.id %}" target="_blank"><p class="small mb-0 font-weight-bold">
                                 {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
-                            </p>
+                            </p></a>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
                             <p class="small mb-0">{{ item.quantity }} @ ${{ item.product.price }} each</p>
@@ -193,7 +193,7 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="#" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'profile' %}" class="btn btn-dark rounded-1 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>
