@@ -79,7 +79,7 @@
       <div class="card-body d-flex flex-column">
           <div class="mt-auto">
         <h5 class="card-title">{{ product.name }}</h5>
-        <p>{{ product.price }}</p>
+        <p class="font-weight-bold">${{ product.price }}</p>
         {% if product.is_available  %}
         <p class="stock-indicator-on d-flex flex-column">In Stock</p>
         {% else %}
