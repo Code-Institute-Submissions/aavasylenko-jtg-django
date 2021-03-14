@@ -1,1 +1,1 @@
-web: gunicorn jtg-django.wsgi:application
+web: gunicorn jtg_django.wsgi:application
